@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--dark-slate-grey);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 700px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 25px;
+}
+.left-card {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+}
+svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  transform: translateY(3px);
+}
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+p {
+  font-size: 0.7rem;
+  padding-right: 40px;
+  /* letter-spacing: 0.5px; */
+  color: var(--dark-slate-grey);
+}
+h1 {
+  margin: 10px 0px;
+  font-size: 2.5rem;
+  color: var(--charcoal-grey);
+}
+ul {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+ul li {
+  list-style: none;
+  font-size: 0.7rem;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: var(--dark-slate-grey);
+  opacity: 1.5;
+}
+.email {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 0.6rem;
+}
+.right-card {
+  width: 45%;
+}
+.right-card img {
+  width: 100%;
+}
+::placeholder {
+  color: var(--grey);
+}
+input {
+  width: 90%;
+  padding: 15px 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  outline: none;
+  font-family: inherit;
+}
+input:focus {
+  background-color: var(--white);
+  border: 1px solid black;
+  color: black;
+  font-weight: 400;
+  font-family: inherit;
+}
+input:focus .error {
+  display: none;
+}
+
+button {
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  padding: 15px 20px;
+  border-radius: 5px;
+  width: 90%;
+  font-weight: 700;
+  font-size: 0.7rem;
+  margin-bottom: 40px;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #fb5961, #ff683f);
+}
+.hide {
+  display: none;
+}
+
+.thank-you-card {
+  width: 380px;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+}
+.thank-you-card h1 {
+  font-size: 40px;
+  line-height: 2.4rem;
+}
+.icon-thankyou-card {
+  width: 40px;
+  margin-bottom: 10px;
+}
+.thank-you-card p {
+  margin-bottom: 30px;
+  line-height: 1rem;
+}
+.thank-you-card button {
+  width: 90%;
+  padding: 15px 25px;
+  margin-bottom: -5px;
+}
+.thank-you-card span {
+  font-weight: 700;
+}
+.error {
+  color: #ff5378;
+  font-weight: 700;
+  font-size: 0.6rem;
+  float: right;
+  transform: translate(-37px, 7px);
+}
+.inputerror {
+  background-color: rgba(253, 178, 194, 0.6);
+  /* opacity: 0.2; */
+  color: var(--tomato);
+  font-family: inherit;
+  border: 1.5px solid rgb(255, 104, 63, 0.4);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 280px;
+    height: 580px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0px;
+  }
+  .right-card {
+    width: 100%;
+  }
+  img {
+    content: url("assets/images/illustration-sign-up-mobile.svg");
+    object-fit: contain;
+  }
+  .left-card {
+    width: 90%;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    padding: 0;
+  }
+  input {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 5px;
+  }
+  .error {
+    transform: translateY(8px);
+  }
+  .thank-you-card {
+    height: 100vh;
+    width: 280px;
+    border-radius: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+  }
+  .hide {
+    display: none;
+  }
+  .icon-thankyou-card {
+    content: url("assets/images/icon-success.svg");
+    margin-bottom: 20px;
+  }
+  .thank-you-card h1 {
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+  .thank-you-card button {
+    margin-top: 100px;
+  }
+}
